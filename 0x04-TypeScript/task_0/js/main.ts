@@ -13,17 +13,17 @@ interface Student {
 }
 
 const student_1: Student = {
-	firstName: 'Lawal';
-        lastName: 'Tajudeen';
-        age: 20;
-        location: 'Abuja';
+	firstName: 'Lawal',
+        lastName: 'Tajudeen',
+        age: 20,
+        location: 'Abuja',
 };
 
 const student_2: Student = {
-	firstName: 'Khalid';
-        lastName: 'John';
-        age: 15;
-        location: 'USA';
+	firstName: 'Khalid',
+        lastName: 'John',
+        age: 15,
+        location: 'USA',
 };
 
 const StudentList = [student_1, student_2];
@@ -39,8 +39,11 @@ StudentList.forEach((std) => {
   lc.textContent = std.location;
   rw.appendChild(fname);
   rw.appendChild(lc);
-  bdy.appendChild(rw);
+  the_bdy.appendChild(rw);
 });
 
 tbl.appendChild(the_bdy);
 document.body.appendChild(tbl);
+
+
+console.log(student_1)
