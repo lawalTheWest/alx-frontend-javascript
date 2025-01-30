@@ -1,6 +1,11 @@
-/**
-extendig the teacher class
-*/
+var director1 = {
+    firstName: 'Taj',
+    lastName: 'Lawal',
+    fullTimeEmployee: true,
+    location: 'Osun',
+    numberOfReports: 17
+};
+console.log(director1);
 var teacher_1 = {
     firstName: 'Lawal',
     lastName: 'Tajudeen',
