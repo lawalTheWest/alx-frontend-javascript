@@ -19,7 +19,19 @@ interface Teacher {
 /**
 extendig the teacher class
 */
+interface Director extends Teacher {
+	numberOfReports: number,
+}
 
+const director1: Director = {
+	firstName: 'Taj';
+        lastName: 'Lawal';
+        fullTimeEmployee: true;
+        location: 'Osun';
+	numberOfReports: 17;
+}
+
+console.log(director1)
 
 const teacher_1: Teacher = {
 	firstName: 'Lawal',
