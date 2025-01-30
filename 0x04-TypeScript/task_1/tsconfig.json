@@ -1,0 +1,17 @@
+
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "lib": ["ES2015", "DOM"],
+    "strict": true,
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "CommonJs",
+    "target": "es5",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true
+  }
+}
+
