@@ -50,3 +50,18 @@ const teacher_2: Teacher = {
 }
 console.log(teacher_1);
 console.log(teacher_2);
+
+/**
+Printing Teachers
+ */
+
+interface printTeacherFunction {
+	firstName: string;
+	lastName: string;
+}
+
+const printTeacher: printTeacherFunction = (firstName, lastName) => {
+	return `${firstName.charAt(0)}. ${lastName}`
+}
+
+console.log(printTeacher("John", "Doe"));
