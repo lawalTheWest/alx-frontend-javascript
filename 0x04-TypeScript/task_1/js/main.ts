@@ -27,10 +27,11 @@ const teacher_1: Teacher = {
 
 const teacher_2: Teacher = {
 	firstName: 'Ohiani',
-        lastName: 'Abdu;lfattai',
+        lastName: 'Abdulfattai',
         fullTimeEmployee: false,
         yearsOfExperience: 5,
         location: 'Abuja',
         contract: false,
 }
+console.log(teacher_1);
 console.log(teacher_2);
