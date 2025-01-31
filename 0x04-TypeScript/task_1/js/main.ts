@@ -24,13 +24,13 @@ interface Director extends Teacher {
 }
 
 const director1: Director = {
-	firstName: 'Taj';
-        lastName: 'Lawal';
-        fullTimeEmployee: true;
-        location: 'Osun';
-	numberOfReports: 17;
+	firstName: 'Taj',
+        lastName: 'Lawal',
+        fullTimeEmployee: true,
+        location: 'Osun',
+	numberOfReports: 17,
 }
-
+/***** Use Case for director interface ******/
 console.log(director1)
 
 const teacher_1: Teacher = {
@@ -48,6 +48,7 @@ const teacher_2: Teacher = {
         yearsOfExperience: 5,
         location: 'Abuja',
 }
+/**** Use case for teacher interface ****/
 console.log(teacher_1);
 console.log(teacher_2);
 
@@ -56,12 +57,44 @@ Printing Teachers
  */
 
 interface printTeacherFunction {
+	(firstName: string, lastName: string): string;
+}
+
+const printTeacher: printTeacherFunction = (firstName: string, lastName: string) => {
+	return `${firstName.charAt(0)}. ${lastName}`;
+}
+/***** Use case ******/
+console.log(printTeacher("John", "Doe"));
+
+/**
+Writing a class
+*/
+interface stdConstructor {
+	/** constructor interface */
 	firstName: string;
 	lastName: string;
 }
 
-const printTeacher: printTeacherFunction = (firstName, lastName) => {
-	return `${firstName.charAt(0)}. ${lastName}`
+class StudentClass {
+	/** student class */
+	firstName: string;
+	lastName: string;
+
+	constructor({ firstName, lastName }: stdConstructor) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+
+	workOnHomework(): string {
+		return "Currently Working";
+	}
+
+	displayName(): string {
+		return this.firstName;
+	}
 }
 
-console.log(printTeacher("John", "Doe"));
+/********* Use case *********/
+const std1 = new StudentClass({ firstName: 'Smart', lastName: 'Smith' });
+console.log(std1.displayName());
+console.log(std1.workOnHomework());
